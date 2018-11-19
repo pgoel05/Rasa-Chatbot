@@ -1,0 +1,1043 @@
+slots:
+  dept:
+    type: text
+  org:
+    type: text
+  rnr:
+    type: text
+  ass:
+    type: text
+  reimb:
+    type: text
+  lang:
+    type: text
+  ann:
+    type: text
+  pos:
+    type: text
+  rel:
+    type: text
+  band:
+    type: text
+  blood:
+    type: text
+  qualifications:
+    type: text
+  designation:
+    type: text
+  country:
+    type: text
+  cos_tcenter:
+    type: text
+  legalentity:
+    type: text
+  issueletter:
+    type: text
+  timesheet:
+    type: text
+  leave:
+    type: text
+  inouttime:
+    type: text
+  attendance:
+    type: text
+  businesstravel:
+    type: text
+  compoff:
+    type: text
+  shift:
+    type: text
+  groupass:
+    type: text
+  benefit:
+    type: text
+  valeure:
+    type: text
+  count:
+    type: text
+  dashboard:
+    type: text
+  help:
+    type: text
+  appointmentletter:
+    type: text
+  performance:
+    type: text
+  goal:
+    type: text
+  probation:
+    type: text
+  task:
+    type: text
+  prjworkflow:
+    type: text
+  purchaseorder:
+    type: text
+  relationshipmgmt:
+    type: text
+  businessdev:
+    type: text
+  resignation:
+    type: text
+  weather_location:
+    type: text
+  learningmanagement:
+    type: text
+  rmmaster:
+    type: text
+  revenuefull:
+    type: text
+  payroll:
+    type: text
+  declaration:
+    type: text
+  ctc:
+    type: text
+  australia:
+    type: text
+  external:
+    type: text
+  interview:
+    type: text
+  recruitement:
+    type: text
+  resume:
+    type: text
+  ageing:
+    type: text
+  rcm:
+    type: text
+
+intents:
+ - how_u_doing
+ - greet
+ - int_thanksnconfirm
+ - help_recieved
+ - ask_weather
+ - another_doubt
+ - your_name
+ - agent
+ - date
+ - permit
+ - travel
+ - business_unit
+ - department
+ - organization
+ - rnrewards
+ - revenue
+ - expense
+ - assets
+ - reimbursement
+ - language
+ - announcements
+ - bonus
+ - currency
+ - pos_ition
+ - rel_gion
+ - ban_d
+ - blo_od
+ - qua_lifications
+ - des_ignation
+ - cou_ntry
+ - pay_slips
+ - dea_ctivatedemployees
+ - hir_ingpage
+ - contractor
+ - cos_tcenter
+ - job_transfer
+ - con_figurelogo
+ - leg_al
+ - iss_ueletter
+ - add_hrdocs
+ - tim_esheet
+ - lea_ve
+ - ino_uttime
+ - att_endance
+ - bus_inesstravel
+ - com_poff
+ - shi_ft
+ - gro_upass
+ - ben_efit
+ - val_eure
+ - cou_nt
+ - das_hboard
+ - act_iveusers
+ - tri_alusers
+ - hel_p
+ - app_ointmentletter
+ - per_formance
+ - goa_l
+ - con_firmationletter
+ - pro_bation
+ - tas_k
+ - prj_workflow
+ - pur_chaseorder
+ - ite_m
+ - rel_ationshipmgmt
+ - bus_inessdev
+ - res_ignation
+ - bas_ic
+ - con_tacts
+ - pay_mentinfo
+ - emp_loyeedetails
+ - soc_ialdetails
+ - add_ressdetails
+ - per_sonaldetails
+ - man_agerialdetails
+ - ass_etallotment
+ - location
+ - col_loboration
+ - lea_rningmanagement
+ - rmm_aster
+ - pay_roll
+ - dec_laration
+ - ct_c
+ - aus_tralia
+ - ext_ernal
+ - int_erview
+ - rec_ruitement
+ - res_ume
+ - age_ing
+ - rc_m
+ - lea_dreport
+
+entities:
+ - weather_location
+
+templates:
+
+  utter_nice_day:
+    - text: "Have a nice day. Goodbye."
+    - text: "Have a good day. bye bye."
+
+  utter_glad_helped:
+    - text: "I am glad that I could help."
+
+  utter_ask_me:
+    - text: "Go ahead, I am here to help."
+
+  utter_fine:
+    - text: "I am fine."
+    - text: "I'm doing great."
+
+  utter_my_name:
+    - text: "I am obi wan kenobi. You can call me ObiE."
+
+  utter_agent_available:
+    - text: "Checking weather the agent is available or not."
+
+  utter_:
+    - text: "Ok, let me check if agent is available."
+
+  utter_default:
+    - text: "I'm unable to answer this question. Do you want to chat with live agent?"
+      buttons:
+      - title: "Yes"
+        payload: '/choose{"yesorno": "yes"}'
+      - title: "No"
+        payload: '/choose{"yesorno": "no"}'
+
+  utter_work_permit:
+    - text: "To update your work permit details, go to Employee Portal > Work Permit or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/WorkPermitMaster/WebContent/index.html."
+
+  utter_travel:
+    - text: "To download travel request template, go to Employee Portal > Travel Requests."
+
+  utter_business_unit:
+    - text: "To add, edit, activate or deactivate a business unit, go to Employee Portal > Business Unit or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/BusinessUnitMaster/WebContent/index.html."
+
+  utter_department_button:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Department Master"
+        payload: '/choose{"dept": "department_master"}'
+      - title: "Sub Department Master"
+        payload: '/choose{"dept": "sub_department_master"}'
+
+  utter_organization:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Organization Master"
+        payload: '/choose{"org": "organization_master"}'
+      - title: "Organization Structure Maintainance"
+        payload: '/choose{"org": "organization_structure_maintainance"}'
+      - title: "Organization Type Master"
+        payload: '/choose{"org": "organization_type_master"}'
+
+  utter_rnr:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "RNR Details"
+        payload: '/choose{"rnr": "rnr_details"}'
+      - title: "RNR Category"
+        payload: '/choose{"rnr": "rnr_category"}'
+      - title: "RNR Sub-Category"
+        payload: '/choose{"rnr": "rnr_sub_category"}'
+
+  utter_revenue:
+    - text: "To view revenue details, go to Employee Portal > Revenue Master."
+      buttons:
+      - title: "Revenue Master"
+        payload: '/choose{"revenuefull": "revenue_master"}'
+      - title: "Revenue Report"
+        payload: '/choose{"revenuefull": "revenue_report"}'
+
+  utter_expense:
+    - text: "To view expense details, go to Employee Portal > Expense Report or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/ExpenseReport/WebContent/index.html."
+
+  utter_assets:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Asset Category"
+        payload: '/choose{"ass": "asset_category"}'
+      - title: "Asset Sub-Category"
+        payload: '/choose{"ass": "asset_sub_category"}'
+      - title: "Employee Asset Details"
+        payload: '/choose{"ass": "employee_asset_details"}'
+
+  utter_reimbursement:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Reimbursement Request"
+        payload: '/choose{"reimb": "reimbursement_request"}'
+      - title: "Reimbursement Approval"
+        payload: '/choose{"reimb": "reimbursement_approval"}'
+      - title: "Reimbursement Category Master"
+        payload: '/choose{"reimb": "reimbursement_category_master"}'
+
+  utter_lang:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Language Master"
+        payload: '/choose{"lang": "language_master"}'
+      - title: "Language Details"
+        payload: '/choose{"lang": "language_details"}'
+
+  utter_ann:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Organization Announcement"
+        payload: '/choose{"ann": "org_ann"}'
+      - title: "Organization Announcement Types"
+        payload: '/choose{"ann": "org_ann_type"}'
+
+  utter_bonus:
+    - text: "To add, edit, activate or deactivate bonus categories, go to Employee Portal > Bonus or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/BonusMaster/WebContent/index.html."
+
+  utter_currency:
+    - text: "To add, edit, activate or deactivate currencies, go to Employee Portal > Currency or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/CurrencyMaster/WebContent/index.html."
+
+  utter_position:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Position"
+        payload: '/choose{"pos": "position"}'
+      - title: "My Profile"
+        payload: '/choose{"pos": "my_profile"}'
+
+  utter_religion:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Religion"
+        payload: '/choose{"rel": "religion"}'
+      - title: "My Profile"
+        payload: '/choose{"rel": "my_profile"}'
+
+  utter_band:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Band"
+        payload: '/choose{"band": "band"}'
+      - title: "My Profile"
+        payload: '/choose{"band": "my_profile"}'
+
+  utter_blood:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Blood Group"
+        payload: '/choose{"blood": "blood"}'
+      - title: "My Profile"
+        payload: '/choose{"blood": "my_profile"}'
+
+  utter_qual:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Educational Details"
+        payload: '/choose{"qualifications": "qual"}'
+      - title: "Qualifications"
+        payload: '/choose{"qualifications": "qualificat_ion"}'
+      - title: "My Profile"
+        payload: '/choose{"qualifications": "my_profile"}'
+
+  utter_designation:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Designation"
+        payload: '/choose{"designation": "designation"}'
+      - title: "My Profile"
+        payload: '/choose{"designation": "my_profile"}'
+
+  utter_country:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Country"
+        payload: '/choose{"country": "country"}'
+      - title: "Region"
+        payload: '/choose{"country": "region"}'
+      - title: "Location"
+        payload: '/choose{"country": "location"}'
+
+  utter_payslips:
+    - text: "To view or download payslips, go to Employee Portal > Pay Slips or https://i8bcc9c4c129.ap1.hana.ondemand.com/VHRHRM/PRL/PayslipReport/WebContent/index.html."
+
+  utter_deactivatedemployees:
+    - text: "To view deactivated employees, go to Employee Portal > Deactivated Employees or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/ArchiveInactiveEmployees/WebContent/index.html."
+
+  utter_hiringpage:
+    - text: "To create or edit users, go to Employee Portal > Hiring Page or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/HiringPage/webContent/index.html."
+
+  utter_contractor:
+    - text: "To view, edit, activate or deactivate contractor details, go to Employee Portal > Contractor or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/ContractorMaster/WebContent/index.html."
+
+  utter_costcenter:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Cost Center"
+        payload: '/choose{"cos_tcenter": "cost_center"}'
+      - title: "Cost Center Incharge"
+        payload: '/choose{"cos_tcenter": "cost_center_incharge"}'
+
+  utter_jobtransfer:
+    - text: "To apply for profile change, go to Employee Portal > Employee Change Request or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeChangeRequest/WebContent/index.html."
+
+  utter_configurelogo:
+    - text: "To configure client logo, go to Employee Portal > Configure Logo or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/ConfigureClientLogo/WebContent/index.html."
+
+  utter_legal:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Legal Entity"
+        payload: '/choose{"legalentity": "legal_entity"}'
+      - title: "Terms and Conditions"
+        payload: '/choose{"legalentity": "terms_and_conditions"}'
+      - title: "Organization Workflow"
+        payload: '/choose{"legalentity": "organization_workflow"}'
+      - title: "System Workflow"
+        payload: '/choose{"legalentity": "system_workflow"}'
+
+  utter_issueletter:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Issue Letter"
+        payload: '/choose{"issueletter": "issue_letter"}'
+      - title: "Letter Type"
+        payload: '/choose{"issueletter": "letter_type"}'
+
+  utter_addhrdocs:
+    - text: "To add/ edit hr documents, go to Employee Portal > Add HR Documents. To access identification documents master, go to Employee Portal > Identification Document Master or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/IdentificationDocMaster/WebContent/index.html."
+
+  utter_timesheets:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Timesheet"
+        payload: '/choose{"timesheet": "time_sheet"}'
+      - title: "Timesheet Report"
+        payload: '/choose{"timesheet": "timesheet_report"}'
+
+  utter_leave:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Short Leave Quota"
+        payload: '/choose{"leave": "short_leave_quota"}'
+      - title: "Short Leaves Transaction"
+        payload: '/choose{"leave": "short_leaves_transaction"}'
+      - title: "Team Leave Report"
+        payload: '/choose{"leave": "team_leave_report"}'
+      - title: "Leave / Time-off"
+        payload: '/choose{"leave": "leave_timeoff"}'
+      - title: "Leave Approval Workflow"
+        payload: '/choose{"leave": "leave_approval_workflow"}'
+      - title: "Leave Balanace Report"
+        payload: '/choose{"leave": "leave_balance_report"}'
+      - title: "Leave Group Master"
+        payload: '/choose{"leave": "leave_group_master"}'
+      - title: "Leave Master"
+        payload: '/choose{"leave": "leave_master"}'
+      - title: "Leave Request Approval"
+        payload: '/choose{"leave": "leave_request_approval"}'
+      - title: "Consolidated Leave Report"
+        payload: '/choose{"leave": "consolidated_leave_report"}'
+
+  utter_inouttime:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Approve Manual In-out time"
+        payload: '/choose{"inouttime": "approve_inout"}'
+      - title: "Manual In-out Time"
+        payload: '/choose{"inouttime": "manual_inout"}'
+      - title: "In-out Time"
+        payload: '/choose{"inouttime": "inout_time"}'
+
+  utter_attendance:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Attendance Report"
+        payload: '/choose{"attendance": "attendance_report"}'
+      - title: "Attendance Report Register"
+        payload: '/choose{"attendance": "attendance_report_register"}'
+      - title: "In-out Time"
+        payload: '/choose{"attendance": "inout_time"}'
+
+  utter_businesstravel:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Business Travel Request"
+        payload: '/choose{"businesstravel": "business_travel_request"}'
+      - title: "Business Travel Approval"
+        payload: '/choose{"businesstravel": "business_travel_approval"}'
+
+  utter_compoff:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Comp-off Credit Request"
+        payload: '/choose{"compoff": "comp_credit_request"}'
+      - title: "Comp-off Approval"
+        payload: '/choose{"compoff": "comp_approval"}'
+
+  utter_shift:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Shift Allocation"
+        payload: '/choose{"shift": "shift_allocation"}'
+      - title: "Shift Details"
+        payload: '/choose{"shift": "shift_details"}'
+      - title: "Shift Master"
+        payload: '/choose{"shift": "shift_master"}'
+      - title: "Shift Pattern Master"
+        payload: '/choose{"shift": "shift_pattern_master"}'
+
+  utter_groupass:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Employee Group Assignment"
+        payload: '/choose{"groupass": "emp_grp_ass"}'
+      - title: "Employee Group Master"
+        payload: '/choose{"groupass": "emp_grp_mas"}'
+      - title: "Employee Group Rules"
+        payload: '/choose{"groupass": "emp_grp_rules"}'
+      - title: "Employee Sub-Group Master"
+        payload: '/choose{"groupass": "emp_subgrp_master"}'
+
+  utter_benefit:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Benefit Master"
+        payload: '/choose{"benefit": "benefit_master"}'
+      - title: "Benefit Parameter Master"
+        payload: '/choose{"benefit": "benefit_parameter_master"}'
+      - title: "Benefit Requests Approval"
+        payload: '/choose{"benefit": "benefit_requests_approval"}'
+      - title: "Employee Benefit Report"
+        payload: '/choose{"benefit": "employee_benefit_reprot"}'
+      - title: "Request for Benefits"
+        payload: '/choose{"benefit": "request_for_benefits"}'
+      - title: "Set Benefit Parameter"
+        payload: '/choose{"benefit": "set_benefit_parameter"}'
+      - title: "Salary Structure"
+        payload: '/choose{"benefit": "salary_structure"}'
+
+  utter_valeure:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "vE Usage Dashboard"
+        payload: '/choose{"valeure": "ve_usage_dashboard"}'
+      - title: "vE Usage Report"
+        payload: '/choose{"valeure": "ve_usage_report"}'
+      - title: "vE Usage Trial Users"
+        payload: '/choose{"valeure": "ve_usage_trial_report"}'
+      - title: "Trial Users Report"
+        payload: '/choose{"valeure": "trial_users_report"}'
+
+  utter_count:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Employee Count"
+        payload: '/choose{"count": "employee_count"}'
+      - title: "Employee List"
+        payload: '/choose{"count": "employee_list"}'
+
+  utter_dashboard:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Active Users Dashboard"
+        payload: '/choose{"dashboard": "active_users_dashboard"}'
+      - title: "Revenue Profit Dashboard"
+        payload: '/choose{"dashboard": "revenue_profit_dashboard"}'
+      - title: "vE Usage Dashboard"
+        payload: '/choose{"dashboard": "ve_usage_dashboard"}'
+
+  utter_activeusers:
+    - text: "To view active users, go to Data Analytics > Active Users Dashboard or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/ActiveEmpGraphReport/WebContent/index.html."
+
+  utter_trialusers:
+    - text: "To view trial users report, go to Employee Portal > Trial User Report or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/TrialUsersReport/WebContent/index.html."
+
+  utter_help:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Help Desk Incharge"
+        payload: '/choose{"help": "help_desk_incharge"}'
+      - title: "Help Desk Report"
+        payload: '/choose{"help": "help_desk_report"}'
+      - title: "Help Desk Request"
+        payload: '/choose{"help": "help_desk_request"}'
+      - title: "Help Desk Review"
+        payload: '/choose{"help": "help_desk_review"}'
+
+  utter_appointmentletter:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Appointment Letter Template"
+        payload: '/choose{"appointmentletter": "appointment_letter_template"}'
+      - title: "Generate Appointment Letter"
+        payload: '/choose{"appointmentletter": "generate_appointment_letter"}'
+
+  utter_performance:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Annual Report"
+        payload: '/choose{"performance": "annual_report"}'
+      - title: "Performance Report"
+        payload: '/choose{"performance": "performance_report"}'
+      - title: "Performance Review"
+        payload: '/choose{"performance": "performance_review"}'
+
+  utter_goals:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Assign New Goals"
+        payload: '/choose{"goal": "assign_new_goals"}'
+      - title: "Goal Plan Master"
+        payload: '/choose{"goal": "goal_plan_master"}'
+      - title: "Goals Library"
+        payload: '/choose{"goal": "goals_library"}'
+      - title: "Track Your Goals"
+        payload: '/choose{"goal": "track_your_goals"}'
+
+  utter_confirmationletter:
+    - text: "To generate appointment letter, go to Probation > Generate Confirmation Letter or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/PROB/CandidateAppointmentApp/WebContent/index.html."
+
+  utter_probation:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Employee Probation Group Master"
+        payload: '/choose{"probation": "employee_probation_group_master"}'
+      - title: "Probation Approval"
+        payload: '/choose{"probation": "probation_approval"}'
+      - title: "Probation Approval Workflow"
+        payload: '/choose{"probation": "probation_approval_workflow"}'
+      - title: "Probation Level Master"
+        payload: '/choose{"probation": "probation_level_master"}'
+      - title: "Probation Period Master"
+        payload: '/choose{"probation": "probation_period_master"}'
+      - title: "Probation Report"
+        payload: '/choose{"probation": "probation_report"}'
+
+  utter_task:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Task Backlog"
+        payload: '/choose{"task": "task_backlog"}'
+      - title: "Task Backlog Report"
+        payload: '/choose{"task": "task_backlog_report"}'
+      - title: "Task List Details "
+        payload: '/choose{"task": "task_list_details"}'
+      - title: "Task Status Report"
+        payload: '/choose{"task": "task_status_report"}'
+      - title: "My To-do Task"
+        payload: '/choose{"task": "my_todo_task"}'
+      - title: "Assign Task "
+        payload: '/choose{"task": "assign_task"}'
+
+  utter_prjworkflow:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Project Workflow Request"
+        payload: '/choose{"prjworkflow": "project_workflow_request"}'
+      - title: "Project Vertical"
+        payload: '/choose{"prjworkflow": "project_vertical"}'
+
+  utter_purchaseorder:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Purchase Approval HR"
+        payload: '/choose{"purchaseorder": "purchase_approval_hr"}'
+      - title: "Purchase Order Attachments"
+        payload: '/choose{"purchaseorder": "purchase_order_attachments"}'
+      - title: "Purchase Request"
+        payload: '/choose{"purchaseorder": "purchase_request"}'
+      - title: "Purchase Request Approval"
+        payload: '/choose{"purchaseorder": "purchase_request_approval"}'
+
+  utter_item:
+    - text: "To view item master, go to Purchase Order Management > Item Master or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/PR/ItemMaster/WebContent/index.html."
+
+  utter_relationshipmgmt:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Relationship Dashboard"
+        payload: '/choose{"relationshipmgmt": "relationship_dashboard"}'
+      - title: "Relationship Development"
+        payload: '/choose{"relationshipmgmt": "relationship_development"}'
+
+  utter_businessdev:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Business Development Report"
+        payload: '/choose{"relationshipmgmt": "business_development_report"}'
+      - title: "Business Vertical Master"
+        payload: '/choose{"relationshipmgmt": "business_vertical_master"}'
+
+  utter_resignation:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Resignation/ Termination Application"
+        payload: '/choose{"resignation": "resignation_application"}'
+      - title: "Resignation Request"
+        payload: '/choose{"resignation": "resignation_request"}'
+      - title: "Seperation Configuration"
+        payload: '/choose{"resignation": "seperation_configuration"}'
+
+  utter_basic:
+    - text: "To view your basic details, go to My Profile > Basic or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_contacts:
+    - text: "To view your contacts, go to My Profile > Contacts or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_paymentinfo:
+    - text: "To view your payment information, go to My Profile > Payment Info or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_employeedetails:
+    - text: "To view your details, go to My Profile > Employee Details or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_socialdetails:
+    - text: "To view your social details, go to My Profile > Social Details or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_addressdetails:
+    - text: "To view address details, go to My Profile > Address Details or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_personaldetails:
+    - text: "To view personal details, go to My Profile > Personal Details or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_managerialdetails:
+    - text: "To view your managerial details, go to My Profile > Managerial Details or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_assetallotment:
+    - text: "To view assets alloted to you, go to My Profile > Asset Allotment Details or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_userguide:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "User Guide Settings"
+        payload: '/choose{"guide": "user_guide_settings"}'
+      - title: "User Manual"
+        payload: '/choose{"guide": "user_manual"}'
+
+  utter_collaboration:
+    - text: "To access collaboration tool, go to Collaboration Tool > My Feeds or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_learningmanagement:
+    - text: "To access your dashboard, go to Learning Management > My Dashboard or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/EmployeeMaster/WebContent/index.html#/Details/EmployeeList(50)."
+
+  utter_rmmaster:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "RM Region Master"
+        payload: '/choose{"rmmaster": "rm_region_master"}'
+      - title: "RM Region State Master"
+        payload: '/choose{"rmmaster": "rm_region_state_master"}'
+
+  utter_payroll:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Wage Component Master"
+        payload: '/choose{"payroll": "wage_component_master"}'
+      - title: "Tax Rate Master"
+        payload: '/choose{"payroll": "tax_rate_master"}'
+      - title: "Discrepancy Report"
+        payload: '/choose{"payroll": "discrepancy_report"}'
+      - title: "Pay Frequency Master"
+        payload: '/choose{"payroll": "pay_frequency_master"}'
+      - title: "Payout Dashboard"
+        payload: '/choose{"payroll": "payout_dashboard"}'
+      - title: "Payroll Component"
+        payload: '/choose{"payroll": "payroll_component"}'
+      - title: "Payroll Employee Group"
+        payload: '/choose{"payroll": "payroll_employee_group"}'
+      - title: "Run Payroll"
+        payload: '/choose{"payroll": "run_payroll"}'
+      - title: "Run Working Days"
+        payload: '/choose{"payroll": "run_working_days"}'
+      - title: "Salary Breakup"
+        payload: '/choose{"payroll": "salary_breakup"}'
+      - title: "Upload Working Days"
+        payload: '/choose{"payroll": "upload_working_days"}'
+      - title: "Block Employee Payroll"
+        payload: '/choose{"payroll": "block_employee_payroll"}'
+
+  utter_declaration:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Employee Investment Declaration"
+        payload: '/choose{"declaration": "employee_investment_declarataion"}'
+      - title: "Employee Declaration Approval"
+        payload: '/choose{"declaration": "employee_declaration_approval"}'
+      - title: "Employee Declaration Form"
+        payload: '/choose{"declaration": "employee_declaration_form"}'
+      - title: "Extra Income Declaration"
+        payload: '/choose{"declaration": "extra_income_declaration"}'
+      - title: "Monthly Tax Declaration"
+        payload: '/choose{"declaration": "monthly_tax_declaration"}'
+      - title: "IT Declaration Cut-off"
+        payload: '/choose{"declaration": "it_declaration_cutoff"}'
+
+  utter_ctc:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Employee CTC"
+        payload: '/choose{"declaration": "employee_ctc"}'
+      - title: "Employee Deduction"
+        payload: '/choose{"declaration": "employee_deduction"}'
+      - title: "Employee Payslip"
+        payload: '/choose{"declaration": "employee_payslip"}'
+      - title: "Employee PF Account Details"
+        payload: '/choose{"declaration": "employee_pf_account_details"}'
+      - title: "Employee Previous Income"
+        payload: '/choose{"declaration": "employee_previous_income"}'
+      - title: "Incentive Payment"
+        payload: '/choose{"declaration": "incentive_payment"}'
+      - title: "Form 16"
+        payload: '/choose{"declaration": "form16"}'
+      - title: "Arrear Payment"
+        payload: '/choose{"declaration": "arrear_payment"}'
+
+  utter_australia:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Australia Payslip"
+        payload: '/choose{"australia": "australia_payslip"}'
+      - title: "Australia Payslip Configuration"
+        payload: '/choose{"australia": "australia_payslip_configuration"}'
+
+  utter_external:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "External Client Status"
+        payload: '/choose{"external": "external_client_status"}'
+      - title: "Parser Configuration"
+        payload: '/choose{"external": "parser_configuration"}'
+      - title: "Posted Job"
+        payload: '/choose{"external": "posted_job"}'
+
+  utter_interview:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "LOI Template"
+        payload: '/choose{"interview": "loi_template"}'
+      - title: "Offer Approval"
+        payload: '/choose{"interview": "offer_approval"}'
+      - title: "Joinings Report"
+        payload: '/choose{"interview": "joinings_report"}'
+      - title: "Candidate Report"
+        payload: '/choose{"interview": "candidate_report"}'
+      - title: "Add/ Modify Candidates"
+        payload: '/choose{"interview": "add_modify_candidates"}'
+      - title: "Schedule Interviews"
+        payload: '/choose{"interview": "schedule_interviews"}'
+      - title: "Interview Rating"
+        payload: '/choose{"interview": "interview_rating"}'
+
+  utter_recruitment:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Recruitment Dashboard"
+        payload: '/choose{"recruitement": "recruitment_dashboard"}'
+      - title: "Requisition Approval"
+        payload: '/choose{"recruitement": "requisition_approval"}'
+      - title: "Requisition Payout"
+        payload: '/choose{"recruitement": "requisition_payout"}'
+      - title: "Job Requisition"
+        payload: '/choose{"recruitement": "job_requisition"}'
+
+  utter_resume:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Resume Bulk Upload"
+        payload: '/choose{"resume": "resume_bulk_upload"}'
+      - title: "Resume Repository Configuration"
+        payload: '/choose{"resume": "resume_repository_configuration"}'
+
+  utter_ageing:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "Average Ageing Report"
+        payload: '/choose{"resume": "average_ageing_report"}'
+      - title: "Candidate Ageing Report"
+        payload: '/choose{"resume": "candidate_ageing_report"}'
+      - title: "Consolidated Job Report"
+        payload: '/choose{"resume": "consolidated_job_report"}'
+
+  utter_rcm:
+    - text: "Please choose from the below options:"
+      buttons:
+      - title: "RCM Client Master"
+        payload: '/choose{"rcm": "rcm_client_master"}'
+      - title: "Tenure Master"
+        payload: '/choose{"rcm": "tenure_master"}'
+
+  utter_leadreport:
+    - text: "To view lead report, go to Relationship Management > Lead Report or https://i8bcc9c4c129.ap1.hana.ondemand.com/ValeurHR/VHRHRM/EP/RMSourceCountReport/WebContent/index.html."
+
+actions:
+ - utter_nice_day
+ - utter_glad_helped
+ - utter_ask_me
+ - utter_fine
+ - utter_my_name
+ - utter_default
+ - utter_agent_available
+ - utter_work_permit
+ - utter_travel
+ - utter_business_unit
+ - utter_department_button
+ - actions.Actiondepartment
+ - actions.ActionSlotReset
+ - actions.ActionWeather
+ - utter_organization
+ - actions.ActionOrganization
+ - utter_rnr
+ - actions.ActionRnr
+ - utter_revenue
+ - utter_expense
+ - utter_assets
+ - actions.ActionAsset
+ - utter_reimbursement
+ - actions.ActionReimbursement
+ - utter_lang
+ - actions.ActionLang
+ - utter_ann
+ - actions.ActionAnn
+ - utter_bonus
+ - utter_currency
+ - utter_position
+ - actions.ActionPosition
+ - utter_religion
+ - actions.ActionReligion
+ - utter_band
+ - actions.ActionBand
+ - utter_blood
+ - actions.ActionBlood
+ - utter_qual
+ - actions.ActionQualification
+ - utter_designation
+ - actions.ActionDesignation
+ - utter_country
+ - actions.ActionCountry
+ - utter_payslips
+ - utter_deactivatedemployees
+ - utter_hiringpage
+ - utter_contractor
+ - utter_costcenter
+ - actions.ActionCostCenter
+ - utter_jobtransfer
+ - utter_configurelogo
+ - utter_legal
+ - actions.ActionLegalEntity
+ - utter_issueletter
+ - actions.ActionIssueLetter
+ - utter_addhrdocs
+ - utter_timesheets
+ - actions.ActionTimesheet
+ - utter_leave
+ - actions.ActionLeave
+ - utter_inouttime
+ - actions.ActionInouttime
+ - utter_attendance
+ - actions.ActionAttendance
+ - utter_businesstravel
+ - actions.ActionBusinessTravel
+ - utter_compoff
+ - actions.ActionCompoff
+ - utter_groupass
+ - actions.ActionGroupmaster
+ - utter_benefit
+ - actions.ActionBenefit
+ - utter_valeure
+ - actions.ActionVeusage
+ - utter_count
+ - actions.ActionCount
+ - utter_dashboard
+ - actions.ActionDashboard
+ - utter_activeusers
+ - utter_trialusers
+ - utter_help
+ - actions.ActionHelp
+ - utter_appointmentletter
+ - actions.ActionAppointment
+ - utter_performance
+ - actions.ActionPerformance
+ - utter_goals
+ - actions.ActionGoals
+ - utter_confirmationletter
+ - utter_probation
+ - actions.ActionProbation
+ - utter_task
+ - actions.ActionTask
+ - utter_prjworkflow
+ - actions.ActionPrjworkflow
+ - utter_purchaseorder
+ - actions.ActionPurchseorder
+ - utter_item
+ - utter_relationshipmgmt
+ - actions.ActionRelationshipmgmt
+ - utter_resignation
+ - actions.ActionResignation
+ - utter_basic
+ - utter_contacts
+ - utter_paymentinfo
+ - utter_employeedetails
+ - utter_socialdetails
+ - utter_addressdetails
+ - utter_personaldetails
+ - utter_managerialdetails
+ - utter_assetallotment
+ - utter_shift
+ - actions.ActionShift
+ - utter_collaboration
+ - utter_learningmanagement
+ - utter_rmmaster
+ - actions.ActionRmmaster
+ - utter_payroll
+ - actions.ActionPayroll
+ - utter_declaration
+ - actions.ActionDeclaration
+ - utter_ctc
+ - actions.ActionCtc
+ - utter_australia
+ - actions.ActionAustralia
+ - utter_external
+ - actions.ActionExternal
+ - utter_interview
+ - actions.ActionInterview
+ - utter_recruitment
+ - actions.ActionRecruitment
+ - utter_resume
+ - actions.ActionResume
+ - utter_ageing
+ - actions.ActionAgeing
+ - utter_rcm
+ - actions.ActionRcm
+ - utter_leadreport
+ - actions.ActionMessagesDatabases
+ - utter_businessdev
+ - actions.ActionBusinessdev
